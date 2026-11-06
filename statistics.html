@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Statistics | Medal Tracker</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-thin-rounded/css/uicons-thin-rounded.css">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-straight/css/uicons-regular-straight.css">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-solid-straight/css/uicons-solid-straight.css">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-solid-sharp/css/uicons-solid-sharp.css">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-curved/css/uicons-regular-curved.css">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="manifest" href="./site.webmanifest">
+  <link rel="icon" href="./favicon.ico">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="./index.html">
+      <span class="brand-mark"><i class="fi fi-ss-ranking-stars"></i></span>
+      <span>Medal<br>Tracker</span>
+    </a>
+    <nav class="side-nav">
+      <a class="" href="./index.html"><span><i class="fi fi-br-home"></i></span> Home</a>
+      <a class="active" href="./statistics.html"><span><i class="fi fi-br-stats"></i></span> Statistics</a>
+      <a class="" href="./medals.html"><span><i class="fi fi-rr-medal"></i></span> My Medals</a>
+    </nav>
+    <p class="sidebar-quote">Study the greats,<br>and become greater.<br>— MJ</p>
+  </aside>
+
+  <main class="main-content">
+    <header class="mobile-header">
+      <a href="./index.html">✦ Medal Tracker</a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" onclick="document.body.classList.toggle('menu-open')">☰</button>
+    </header>
+    <div class="page-container">
+      <div id="app-alerts" aria-live="polite"></div>
+      <section class="page-heading">
+  <div><p class="eyebrow">NUMBERS & PROGRESS</p><h1>Statistics <span class="heading-star"><i class="fi fi-rs-sparkles"></i></span></h1><p class="subtitle">Explore your achievement history in detail.</p></div>
+</section>
+<div class="stats-grid">
+  <section class="panel"><p class="eyebrow">PROGRESS</p><h2>Medals by Year</h2><div class="chart-wrap tall"><canvas id="stats-year-chart"></canvas></div></section>
+  <section class="panel"><p class="eyebrow">DISTRIBUTION</p><h2>Medal Types</h2><div class="chart-wrap tall"><canvas id="stats-type-chart"></canvas></div></section>
+  <section class="panel"><p class="eyebrow">COMPETITIONS</p><h2>Achievements by Olympiad</h2><div class="chart-wrap tall"><canvas id="stats-competition-chart"></canvas></div></section>
+  <section class="panel"><p class="eyebrow">COMPARISON</p><h2>Compare Two Years</h2>
+    <div class="compare-controls"><select id="compare-year-a" class="form-select"><option value="">Year 1</option></select><span>×</span><select id="compare-year-b" class="form-select"><option value="">Year 2</option></select></div>
+    <div class="chart-wrap tall"><canvas id="compare-chart"></canvas></div><p id="compare-empty" class="muted small-note">Select two years to compare.</p>
+  </section>
+</div>
+      <footer>Medal Tracker <span>•</span> © 2026 Talita Rezende</footer>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./static/js/storage.js"></script>
+  <script src="./static/js/app.js"></script>
+  <script src="./static/js/statistics.js"></script>
+</body>
+</html>
