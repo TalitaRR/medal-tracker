@@ -51,7 +51,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         <td><span class="medal-pill ${escapeHtml(m.medal_type)}">${escapeHtml(medalLabel(m.medal_type))}</span></td>
         <td>${Number(m.year)}</td>
         <td class="text-end action-cell">
-          <button class="icon-button edit-medal" type="button" data-id="${escapeHtml(m.id)}" title="Edit"><i class="fi fi-rc-pencil"></i></button>
           <button class="icon-button delete-button delete-medal" type="button" data-id="${escapeHtml(m.id)}" title="Delete"><i class="fi fi-rr-trash"></i></button>
         </td>
       </tr>`).join("");
